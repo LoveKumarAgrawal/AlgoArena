@@ -10,7 +10,7 @@ A modern, full-stack competitive programming platform inspired by Codeforces, bu
 [![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
-[🎥 **Watch Demo Video**](DEMO_VIDEO_LINK)
+### 🎥 [Watch Demo Video](https://github.com/LoveKumarAgrawal/AlgoArena/blob/7dc9bf003d1a9d5185fdfdc05fb7e69a21a0de5f/media/AlgoArena%20demo.mp4)
 
 </div>
 
@@ -71,6 +71,7 @@ Built as a **monorepo using Turborepo**, AlgoArena demonstrates enterprise-grade
 AlgoArena follows a **modular microservices architecture** within a monorepo:
 
 ```
+
 ┌─────────────────────────────────────────────────────────────────┐
 │                         Frontend (Next.js)                       │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
@@ -100,6 +101,11 @@ AlgoArena follows a **modular microservices architecture** within a monorepo:
     │   (Prisma ORM)      │
     └─────────────────────┘
 ```
+
+<div align="center">
+  <img src="./media/Screenshot%202025-12-22%20165243.png" alt="AlgoArena Architecture Diagram" width="800">
+  <p><em>AlgoArena System Architecture (Created with Excalidraw)</em></p>
+</div>
 
 ### Key Architectural Decisions
 
