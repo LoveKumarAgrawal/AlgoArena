@@ -10,7 +10,17 @@ A modern, full-stack competitive programming platform inspired by Codeforces, bu
 [![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
-### 🎥 [Watch Demo Video](https://github.com/LoveKumarAgrawal/AlgoArena/blob/7dc9bf003d1a9d5185fdfdc05fb7e69a21a0de5f/media/AlgoArena%20demo.mp4)
+<br/>
+
+## 🎥 Demo Video
+
+<div align="center">
+  <a href="https://drive.google.com/file/d/1EsPJ81qzSaN55d-894LzLMSxmCGkeE8m/view?usp=drive_link" target="_blank">
+    <img src="https://img.shields.io/badge/▶️_Watch_Demo_Video-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Watch Demo Video" />
+  </a>
+</div>
+
+<br/>
 
 </div>
 
