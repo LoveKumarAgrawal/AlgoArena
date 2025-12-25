@@ -113,7 +113,7 @@ AlgoArena follows a **modular microservices architecture** within a monorepo:
 ```
 
 <div align="center">
-  <img src="./media/Screenshot%202025-12-22%20165243.png" alt="AlgoArena Architecture Diagram" width="800">
+  <img src="./media/Screenshot%202025-12-25%20172225.png" alt="AlgoArena Architecture Diagram" width="800">
   <p><em>AlgoArena System Architecture (Created with Excalidraw)</em></p>
 </div>
 
