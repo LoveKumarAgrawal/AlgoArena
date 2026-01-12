@@ -2,12 +2,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <bits/stdc++.h>
-using namespace std;
 
 ##USER_CODE_HERE##
 
 int main() {
+  std::vector<int> arr;
   int size_arr;
   std::cin >> size_arr;
   std::vector<int> arr(size_arr);

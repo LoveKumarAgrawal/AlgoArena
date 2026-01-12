@@ -48,8 +48,8 @@ export class FullProblemDefinitionParser {
 
   generateCpp(): string {
     const inputs = this.inputFields
-      .map((field) => `${this.mapTypeToCpp(field.type)} ${field.name}`)
-      .join(", ");
+      .map((field) => `${this.mapTypeToCpp(field.type)} ${field.name};`)
+      .join("\n ");
     const inputReads = this.inputFields
       .map((field) => {
         if (field.type.startsWith("list<")) {
@@ -71,6 +71,7 @@ export class FullProblemDefinitionParser {
 ##USER_CODE_HERE##
 
 int main() {
+  ${inputs}
   ${inputReads}
   ${functionCall}
   ${outputWrite}
