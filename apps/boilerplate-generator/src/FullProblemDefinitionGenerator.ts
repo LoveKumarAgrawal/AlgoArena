@@ -47,38 +47,49 @@ export class FullProblemDefinitionParser {
   }
 
   generateCpp(): string {
-    const inputs = this.inputFields
-      .map((field) => `${this.mapTypeToCpp(field.type)} ${field.name};`)
-      .join("\n ");
+    // Separate declarations for simple vs list types
+    const simpleDeclarations = this.inputFields
+      .filter(field => !field.type.startsWith("list<"))
+      .map((field) => `  ${this.mapTypeToCpp(field.type)} ${field.name};`)
+      .join("\n");
+
+    const listDeclarations = this.inputFields
+      .filter(field => field.type.startsWith("list<"))
+      .map((field) => `  ${this.mapTypeToCpp(field.type)} ${field.name};`)
+      .join("\n");
+
     const inputReads = this.inputFields
       .map((field) => {
         if (field.type.startsWith("list<")) {
-          return `int size_${field.name};\n  std::cin >> size_${field.name};\n  ${this.mapTypeToCpp(field.type)} ${field.name}(size_${field.name});\n  for(int i = 0; i < size_${field.name}; ++i) std::cin >> ${field.name}[i];`;
+          return `  int size_${field.name};\n  std::cin >> size_${field.name};\n  ${field.name}.resize(size_${field.name});\n  for(int i = 0; i < size_${field.name}; ++i) std::cin >> ${field.name}[i];`;
         } else {
-          return `std::cin >> ${field.name};`;
+          return `  std::cin >> ${field.name};`;
         }
       })
-      .join("\n  ");
-    const outputType = this.outputFields[0].type;
-    const functionCall = `${outputType} result = ${this.functionName}(${this.inputFields.map((field) => field.name).join(", ")});`;
-    const outputWrite = `std::cout << result << std::endl;`;
+      .join("\n");
 
-    return `
-#include <iostream>
+    const outputType = this.mapTypeToCpp(this.outputFields[0].type);
+    const functionCall = `${outputType} result = ${this.functionName}(${this.inputFields.map((field) => field.name).join(", ")});`;
+    const outputWrite = `  std::cout << result << std::endl;`;
+
+    return `#include <iostream>
 #include <vector>
 #include <string>
 
 ##USER_CODE_HERE##
 
 int main() {
-  ${inputs}
-  ${inputReads}
-  ${functionCall}
-  ${outputWrite}
+${simpleDeclarations}
+
+${listDeclarations}
+
+${inputReads}
+${functionCall}
+${outputWrite}
   return 0;
-}
-    `;
+}`;
   }
+
 
   generateJs(): string {
     const inputs = this.inputFields.map((field) => field.name).join(", ");

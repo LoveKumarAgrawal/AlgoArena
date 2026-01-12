@@ -36,7 +36,7 @@ function generatePartialBoilerplate(generatorFilePath: string) {
   console.log("Boilerplate code generated successfully!");
 }
 
-function generateFullBoilerPLate(generatorFilePath: string) {
+function generateFullBoilerPlate(generatorFilePath: string) {
   const inputFilePath = path.join(__dirname, generatorFilePath, "Structure.md");
   const boilerplatePath = path.join(
     __dirname,
@@ -70,4 +70,4 @@ function generateFullBoilerPLate(generatorFilePath: string) {
 }
 
 generatePartialBoilerplate(process.env.GENERATOR_FILE_PATH ?? "");
-generateFullBoilerPLate(process.env.GENERATOR_FILE_PATH ?? "");
+generateFullBoilerPlate(process.env.GENERATOR_FILE_PATH ?? "");
