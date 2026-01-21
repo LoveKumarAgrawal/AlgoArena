@@ -12,14 +12,7 @@ A modern, full-stack competitive programming platform inspired by Codeforces, bu
 
 <br/>
 
-## 🎥 Demo Video
-
-<div align="center">
-  <a href="https://drive.google.com/file/d/1EsPJ81qzSaN55d-894LzLMSxmCGkeE8m/view?usp=drive_link" target="_blank">
-    <img src="https://img.shields.io/badge/▶️_Watch_Demo_Video-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Watch Demo Video" />
-  </a>
-</div>
-
+## 🎥 [Demo](./media/Demo.gif)
 <br/>
 
 </div>
