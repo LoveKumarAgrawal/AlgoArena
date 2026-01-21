@@ -12,7 +12,7 @@ A modern, full-stack competitive programming platform inspired by Codeforces, bu
 
 <br/>
 
-## 🎥 [Demo](./media/Demo.gif)
+## 🎥 ![Demo](./media/Demo.gif)
 <br/>
 
 </div>
