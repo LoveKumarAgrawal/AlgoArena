@@ -51,3 +51,17 @@ export const getProblems = async () => {
   });
   return problems;
 };
+
+export const getAllProblems = async () => {
+  const problems = await db.problem.findMany({
+    orderBy: { createdAt: "asc" },
+    select: {
+      id: true,
+      title: true,
+      slug: true,
+      difficulty: true,
+      hidden: true,
+    },
+  });
+  return problems;
+};
